@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.body {
+    margin-top: 5rem;
+    font-family: "Muller";
+}
+.SUB20 {
+    background-color: #f6c9f8;
+    border: 1px solid #f603ce;
+    border-radius: 80px/100px;
+    font-weight: bold;
+}
+.SUB18 {
+    background-color: #c9f3f8;
+    border: 1px solid #03d2f6;
+    border-radius: 80px/100px;
+    font-weight: bold;
+}
+.SUB16 {
+    background-color: #f8e0c9;
+    border: 1px solid #f6b403;
+    border-radius: 80px/100px;
+    font-weight: bold;
+}
+.text_column {
+    text-align: center;
+}
+.col_name {
+    text-align: center;
+    text-wrap: none;
+    font-size: smaller;
+}
+.text_result {
+    text-align: center;
+    text-wrap: none;
+    font-size: smaller;
+    font-weight: bolder;
+}
+.table{
+    font-size: 16px;
+}
+@media (max-width: 767px) {
+    .table{
+        font-size: 10px;
+    }
+}
+table tr td{
+   padding:0px;
+}
