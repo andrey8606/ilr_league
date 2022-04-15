@@ -1,10 +1,5 @@
 version: '3.3'
 
-networks:
-  private:
-  proxy:
-    external: true
-
 services:
   db:
     image: postgres:12-alpine
@@ -13,8 +8,6 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
-    networks:
-      - private
 
   web:
     image: andrey8606/ilr_league:latest
@@ -28,8 +21,6 @@ services:
       - db
     env_file:
       - ./.env
-    networks:
-      - private
 
   nginx:
     image: nginx:alpine
@@ -43,9 +34,6 @@ services:
     environment:
       VIRTUAL_HOST: running-league.ilovesupersport.com
       LETSENCRYPT_HOST: running-league.ilovesupersport.com
-    networks:
-      - private
-      - proxy
     depends_on:
       - web
 
