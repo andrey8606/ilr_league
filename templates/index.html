@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    {%  load static %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="AZ" content="Лига плавания I Love Swimming">
+    <meta name="AZ" content="Лига бега I Love Running">
     <meta name="theme-color" content="#563d7c">
     <title>Лига плавания I Love Swimming</title>
+    {% load static %}
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/favicon-16x16.png.png' %}">
     <link rel="icon" type="image/png" href="{% static 'icons/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
@@ -124,8 +125,9 @@
 <body>
     <div id="rec242202926" class="r t-rec" style=" " data-animationappear="off" data-record-type="338">
         <!-- cover -->
+        {% load static %}
         <div class="t-cover" id="recorddiv242202926" bgimgfield="img" style="height: 592px; background-image: url(https://static.tildacdn.com/tild3561-3837-4638-a561-646339306664/-/resize/20x/XgQEZG8KKAVHzSGgY2gO.jpg);">
-            <div class="t-cover__carrier loaded" id="coverCarry242202926" data-content-cover-id="242202926" data-content-cover-bg="https://static.tildacdn.com/tild3561-3837-4638-a561-646339306664/XgQEZG8KKAVHzSGgY2gO.jpg" data-content-cover-height="60vh" data-content-cover-parallax="" style="height: 592px; background-attachment: scroll; background-image: url(https://thumb.tildacdn.com/tild3561-3837-4638-a561-646339306664/-/format/webp/XgQEZG8KKAVHzSGgY2gO.jpg;);"></div>
+            <div class="t-cover__carrier loaded" id="coverCarry242202926" data-content-cover-id="242202926" data-content-cover-bg="https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg" data-content-cover-height="60vh" data-content-cover-parallax="" style="height: 592px; background-attachment: scroll; background-image: url(https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg;);"></div>
             <div class="t-cover__filter" style="height: 592px; background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));"></div>
             <div class="t338">
                 <div class="t-container">
@@ -133,11 +135,11 @@
                         <div class="t-cover__wrapper t-valign_middle" style="height: 592px; position: relative; z-index: 1;">
                             <div class="t338 t-align_left" style="">
                                 <div data-hook-content="covercontent">
-                                    <div class="t339__wrapper"> <img class="t338__logo t-img loaded" data-tu-max-width="800" data-tu-max-height="800" style="" src="https://thumb.tildacdn.com/tild3430-6162-4835-b063-626563313330/-/resize/560x/-/format/webp/ILSL_logo_left2_whit.png" data-original="https://static.tildacdn.com/tild3430-6162-4835-b063-626563313330/ILSL_logo_left2_whit.png" imgfield="img2" data-hook-clogo="coverlogo">
+                                    <div class="t339__wrapper"> <img class="t338__logo t-img loaded" data-tu-max-width="800" data-tu-max-height="800" style="" src="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png" data-original="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png" imgfield="img2" data-hook-clogo="coverlogo">
                                         <div class="t338__descr t-descr t-descr_xl" style="" field="descr">
-                                            Участие в&nbsp;лиге доступно для каждого ученика школы, который когда-либо плавал контрольные 1000 метров<br>
-                                            <br>Лига задумана в&nbsp;первую очередь для отслеживания своих результатов и&nbsp;соревнования самим с&nbsp;собой <br>
-                                            <br>После каждого контрольного заплыва на&nbsp;1000 метров результат автоматически попадает в&nbsp;лигу
+                                            Участие в лиге доступно для каждого ученика школы, который когда-либо бегал контрольные 1000 или 5000 метров<br>
+                                            <br>Лига задумана в первую очередь для отслеживания своих результатов и соревнования самим с собой <br>
+                                            <br>После каждого контрольного забега результат автоматически попадает в лигу
                                         </div>
                                     </div>
                                 </div>
@@ -194,6 +196,13 @@
                             <option {% if year_dropdown_value == '2020' %} selected {% endif %}>2020</option>
                             <option {% if year_dropdown_value == '2021' %} selected {% endif %}>2021</option>
                             <option {% if year_dropdown_value == '2022' %} selected {% endif %}>2022</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4 col-lg-4">
+                        <label for="distance">Distance</label>
+                        <select id="distance" class="form-control form-control-sm" name="distance" onchange="this.form.submit()">
+                            <option {% if distance_dropdown_value == '1000' %} selected {% endif %}>1000</option>
+                            <option {% if distance_dropdown_value == '5000' %} selected {% endif %}>5000</option>
                         </select>
                     </div>
                 </div>
@@ -265,19 +274,24 @@
                             {% if result.rank == 'none' %}
 
                             {% else %}
-                                {% if result.rank == 'SUB16' %}
+                                {% if result.rank == 'SUB20' %}
                                     <div>
                                         <span class="badge badge-warning tags" style="background-color: #f8d682">{{ result.rank }}</span>
                                     </div>
                                 {% endif %}
-                                {% if result.rank == 'SUB18' %}
+                                {% if result.rank == 'SUB25' %}
                                     <div>
                                         <span class="badge badge-success tags" style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
                                     </div>
                                 {% endif %}
-                                {% if result.rank == 'SUB20' %}
+                                {% if result.rank == 'SUB4' %}
                                     <div>
-                                        <span class="badge badge-warning tags" style="background-color: #cd7f32">{{ result.rank }}</span>
+                                        <span class="badge badge-warning tags" style="background-color: #f8d682">{{ result.rank }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if result.rank == 'SUB5' %}
+                                    <div>
+                                        <span class="badge badge-success tags" style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
                                     </div>
                                 {% endif %}
                             {% endif %}
@@ -532,14 +546,6 @@
                         <div class="t-sociallinks">
                             <div class="t-sociallinks__wrapper">
                                 <div class="t-sociallinks__item">
-                                    <a href="https://www.facebook.com/iloverunningrussia" target="_blank">
-                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                                            <desc>Facebook</desc>
-                                            <path style="fill:#ffffff;" d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="t-sociallinks__item">
                                     <a href="https://vk.com/ilovesupersport" target="_blank">
                                         <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 99 99" enable-background="new 0 0 99 99" xml:space="preserve">
                                             <desc>VK</desc>
@@ -552,16 +558,6 @@
                                         <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                                             <desc>Youtube</desc>
                                             <path style="fill:#ffffff;" d="M24 0.0130005C37.248 0.0130005 47.987 10.753 47.987 24C47.987 37.247 37.247 47.987 24 47.987C10.753 47.987 0.0130005 37.247 0.0130005 24C0.0130005 10.753 10.752 0.0130005 24 0.0130005ZM35.815 18.093C35.565 16.756 34.452 15.758 33.173 15.635C30.119 15.439 27.054 15.28 23.995 15.278C20.936 15.276 17.882 15.432 14.828 15.625C13.544 15.749 12.431 16.742 12.182 18.084C11.898 20.017 11.756 21.969 11.756 23.92C11.756 25.871 11.898 27.823 12.182 29.756C12.431 31.098 13.544 32.21 14.828 32.333C17.883 32.526 20.935 32.723 23.995 32.723C27.053 32.723 30.121 32.551 33.173 32.353C34.452 32.229 35.565 31.084 35.815 29.747C36.101 27.817 36.244 25.868 36.244 23.919C36.244 21.971 36.101 20.023 35.815 18.093ZM21.224 27.435V20.32L27.851 23.878L21.224 27.435Z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="t-sociallinks__item">
-                                    <a href="https://www.instagram.com/iloverunning_russia" target="_blank">
-                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 30 30" xml:space="preserve">
-                                            <desc>Instagram</desc>
-                                            <path style="fill:#ffffff;" d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path>
-                                            <path style="fill:#ffffff;" d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path>
-                                            <path style="fill:#ffffff;" d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path>
                                         </svg>
                                     </a>
                                 </div>
