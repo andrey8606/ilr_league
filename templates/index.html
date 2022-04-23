@@ -15,132 +15,210 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
-    <link href="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.css"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="https://project50997.tilda.ws/tilda-blocks-2.14.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-animation-1.0.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-cover-1.0.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-menusub-1.0.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-forms-1.0.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-animation-1.0.min.css" rel="stylesheet"
+          media="screen">
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-cover-1.0.min.css" rel="stylesheet"
+          media="screen">
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-menusub-1.0.min.css" rel="stylesheet"
+          media="screen">
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-forms-1.0.min.css" rel="stylesheet"
+          media="screen">
 
     <style>
         body {
             font-family: "Muller";
         }
+
         footer {
             margin-top: 5rem;
         }
+
         .text_column {
             text-align: center;
             font-size: smaller;
             font-weight: normal;
         }
+
         .col_name {
             text-align: center;
             text-wrap: none;
             font-size: smaller;
             font-weight: bold;
         }
+
         .text_result {
             text-align: center;
             text-wrap: none;
             font-size: smaller;
             font-weight: normal;
         }
-        .table{
+
+        .table {
             font-size: 16px;
         }
-        .t-container:after {clear:both}*,
-        a,b,blockquote,center,code,div,h1,h2,h3,h4,h5,h6,i,img,p,pre,span,table,td,th,tr,u,video{margin:0;padding:0;border:0}
-        .t-container
-            {margin-left:auto;margin-right:auto;padding:0;width:100%}
-        .t-container{max-width:1200px}
-        .t-container.flexx
-            {
-                display:-webkit-box;
-                display:-moz-box;
-                display:-ms-flexbox;
-                display:-webkit-flex;
-                display:flex}
+
+        .t-container:after {
+            clear: both
+        }
+
+        *,
+        a, b, blockquote, center, code, div, h1, h2, h3, h4, h5, h6, i, img, p, pre, span, table, td, th, tr, u, video {
+            margin: 0;
+            padding: 0;
+            border: 0
+        }
+
+        .t-container {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            width: 100%
+        }
+
+        .t-container {
+            max-width: 1200px
+        }
+
+        .t-container.flexx {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex
+        }
+
         .t-container:after,
-        .t-container:before {display:table;content:" "}
-        .t-col
-            {
-                display:inline;
-                float:left;
-                margin-left:20px;
-                margin-right:20px;
-                width:100%
-            }
-        .t-col.flexx
-            {
-                align-items:stretch;
-                height:inherit;
-                margin-top:auto;
-                margin-bottom:auto
-            }
-        .t-col_3{max-width:260px}
-        .t-col_8{max-width:760px}
+        .t-container:before {
+            display: table;
+            content: " "
+        }
+
+        .t-col {
+            display: inline;
+            float: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%
+        }
+
+        .t-col.flexx {
+            align-items: stretch;
+            height: inherit;
+            margin-top: auto;
+            margin-bottom: auto
+        }
+
+        .t-col_3 {
+            max-width: 260px
+        }
+
+        .t-col_8 {
+            max-width: 760px
+        }
+
         @media (max-width: 767px) {
-            .table{
+            .table {
                 font-size: 11px;
-                }
             }
-        @media screen and (max-width:960px)
-        {
-            .t-col,
-            .t-container {display:block; margin-top: 1rem}
-            .t-container {max-width:640px}
-            .t-col,
-            .t-col_3,
-            .t-col_8 {width:100%;max-width:100%}
-            .t-col
-            {
-                float:none;
-                padding-left:20px;
-                padding-right:20px;
-                margin:0;
-                box-sizing:border-box
+            .t-col {
+                float: none;
+                padding-left: 0;
+                padding-right: 0;
+                margin: 0;
+                box-sizing: border-box
             }
         }
-        @media screen and (max-width:1200px)
-        {
-            .t-container {max-width:960px;padding:0}
-            .t-col
-            {
-                display:inline;
-                float:left;
-                margin-left:10px;
-                margin-right:10px;
-                width:100%
+
+        @media screen and (max-width: 960px) {
+            .t-col,
+            .t-container {
+                display: block;
+                margin-top: 1rem
             }
-            .t-col_3 {max-width:220px}
-            .t-col_8 {max-width:620px}
+
+            .t-container {
+                max-width: 640px
+            }
+
+            .t-col,
+            .t-col_3,
+            .t-col_8 {
+                width: 100%;
+                max-width: 100%
+            }
+
+            .t-col {
+                float: none;
+                margin-left: 10px;
+                margin-right: 10px;
+                box-sizing: border-box
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .t-container {
+                max-width: 960px;
+                padding: 0
+            }
+
+            .t-col {
+                display: inline;
+                float: left;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 100%
+            }
+
+            .t-col_3 {
+                max-width: 220px
+            }
+
+            .t-col_8 {
+                max-width: 620px
+            }
         }
     </style>
 </head>
 <body>
-    <div id="rec242202926" class="r t-rec" style=" " data-animationappear="off" data-record-type="338">
-        <!-- cover -->
-        {% load static %}
-        <div class="t-cover" id="recorddiv242202926" bgimgfield="img" style="height: 592px; background-image: url(https://static.tildacdn.com/tild3561-3837-4638-a561-646339306664/-/resize/20x/XgQEZG8KKAVHzSGgY2gO.jpg);">
-            <div class="t-cover__carrier loaded" id="coverCarry242202926" data-content-cover-id="242202926" data-content-cover-bg="https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg" data-content-cover-height="60vh" data-content-cover-parallax="" style="height: 592px; background-attachment: scroll; background-image: url(https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg;);"></div>
-            <div class="t-cover__filter" style="height: 592px; background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));"></div>
-            <div class="t338">
-                <div class="t-container">
-                    <div class="t-col t-col_8 ">
-                        <div class="t-cover__wrapper t-valign_middle" style="height: 592px; position: relative; z-index: 1;">
-                            <div class="t338 t-align_left" style="">
-                                <div data-hook-content="covercontent">
-                                    <div class="t339__wrapper"> <img class="t338__logo t-img loaded" data-tu-max-width="800" data-tu-max-height="800" style="" src="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png" data-original="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png" imgfield="img2" data-hook-clogo="coverlogo">
-                                        <div class="t338__descr t-descr t-descr_xl" style="" field="descr">
-                                            Участие в лиге доступно для каждого ученика школы, который когда-либо бегал контрольные 1000 или 5000 метров<br>
-                                            <br>Лига задумана в первую очередь для отслеживания своих результатов и соревнования самим с собой <br>
-                                            <br>После каждого контрольного забега результат автоматически попадает в лигу
-                                        </div>
+<div id="rec242202926" class="r t-rec" style=" " data-animationappear="off" data-record-type="338">
+    <!-- cover -->
+    {% load static %}
+    <div class="t-cover" id="recorddiv242202926" bgimgfield="img"
+         style="height: 592px; background-image: url(https://static.tildacdn.com/tild3561-3837-4638-a561-646339306664/-/resize/20x/XgQEZG8KKAVHzSGgY2gO.jpg);">
+        <div class="t-cover__carrier loaded" id="coverCarry242202926" data-content-cover-id="242202926"
+             data-content-cover-bg="https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg"
+             data-content-cover-height="60vh" data-content-cover-parallax=""
+             style="height: 592px; min-width: 580px; background-attachment: scroll;
+             background-image: url(https://static-ilovesupersport.gcdn.co/store/uploads/pages/pageblocks/blockcoveritem/1586/cover_image/main-9dbbf3e3d0b303c2dc14eba9ba25a822.jpg;);"></div>
+        <div class="t-cover__filter"
+             style="height: 592px; background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));"></div>
+        <div class="t338">
+            <div class="t-container">
+                <div class="t-col t-col_8 ">
+                    <div class="t-cover__wrapper t-valign_middle"
+                         style="height: 592px; position: relative; z-index: 1;">
+                        <div class="t338 t-align_left" style="">
+                            <div data-hook-content="covercontent">
+                                <div class="t339__wrapper"><img class="t338__logo t-img loaded" data-tu-max-width="800"
+                                                                data-tu-max-height="800" style=""
+                                                                src="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png"
+                                                                data-original="https://static.tildacdn.com/tild3761-3937-4535-b965-333365346233/ILRLeague_white.png"
+                                                                imgfield="img2" data-hook-clogo="coverlogo">
+                                    <div class="t338__descr t-descr t-descr_xl" style="" field="descr">
+                                        Участие в лиге доступно для каждого ученика школы, который когда-либо бегал
+                                        контрольные 1000 или 5000 метров<br>
+                                        <br>Лига задумана в первую очередь для отслеживания своих результатов и
+                                        соревнования самим с собой <br>
+                                        <br>После каждого контрольного забега результат автоматически попадает в лигу
                                     </div>
                                 </div>
                             </div>
@@ -149,87 +227,99 @@
                 </div>
             </div>
         </div>
-        <style>
-            #rec242202926 .t-btn[data-btneffects-first],
-            #rec242202926 .t-btn[data-btneffects-second],
-            #rec242202926 .t-submit[data-btneffects-first],
-            #rec242202926 .t-submit[data-btneffects-second]
-            {
-                position: relative;
-                overflow: hidden;
-                -webkit-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-        </style>
-        <script type="text/javascript">
-        $(document).ready(function() {});
-        </script>
     </div>
-    <div class="container" style="padding-top: 90px; padding-bottom: 0px">
-        <!--
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">ILS Swimming League</a>
-        </nav>
-        -->
-        <div class="t-container">
-            <form method="get", action="." id="filter_form">
-                <div class="form-row">
-                    <div class="form-group col-md-4 col-lg-4">
-                        <label for="city">City</label>
-                        <select id="city" class="form-control form-control-sm" name="city" onchange="this.form.submit()">
-                            <option {% if city_dropdown_value == 'All' %} selected {% endif %}>All</option>
-                            <option {% if city_dropdown_value == 'Moscow' %} selected {% endif %}>Moscow</option>
-                            <option {% if city_dropdown_value == 'Saint-Petersburg' %} selected {% endif %}>Saint-Petersburg</option>
-                            <option {% if city_dropdown_value == 'Rostov-on-Don' %} selected {% endif %}>Rostov-on-Don</option>
-                            <option {% if city_dropdown_value == 'Sevastopol' %} selected {% endif %}>Sevastopol</option>
-                            <option {% if city_dropdown_value == 'Kemerovo' %} selected {% endif %}>Kemerovo</option>
-                            <option {% if city_dropdown_value == 'Kazan' %} selected {% endif %}>Kazan</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4 col-lg-4">
-                        <label for="year">Year</label>
-                        <select id="year" class="form-control form-control-sm" name="year" onchange="this.form.submit()">
-                            <option {% if year_dropdown_value == '2016' %} selected {% endif %}>2016</option>
-                            <option {% if year_dropdown_value == '2017' %} selected {% endif %}>2017</option>
-                            <option {% if year_dropdown_value == '2018' %} selected {% endif %}>2018</option>
-                            <option {% if year_dropdown_value == '2019' %} selected {% endif %}>2019</option>
-                            <option {% if year_dropdown_value == '2020' %} selected {% endif %}>2020</option>
-                            <option {% if year_dropdown_value == '2021' %} selected {% endif %}>2021</option>
-                            <option {% if year_dropdown_value == '2022' %} selected {% endif %}>2022</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4 col-lg-4">
-                        <label for="distance">Distance</label>
-                        <select id="distance" class="form-control form-control-sm" name="distance" onchange="this.form.submit()">
-                            <option {% if distance_dropdown_value == '1000' %} selected {% endif %}>1000</option>
-                            <option {% if distance_dropdown_value == '5000' %} selected {% endif %}>5000</option>
-                        </select>
+    <style>
+        #rec242202926 .t-btn[data-btneffects-first],
+        #rec242202926 .t-btn[data-btneffects-second],
+        #rec242202926 .t-submit[data-btneffects-first],
+        #rec242202926 .t-submit[data-btneffects-second] {
+            position: relative;
+            overflow: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+</div>
+<div class="t-container_table" style="padding-top: 90px; padding-bottom: 0px; padding-left: 10px">
+    <!--
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">ILS Swimming League</a>
+    </nav>
+    -->
+    <div class="t-container">
+        <form method="get" , action="." id="filter_form">
+            <div class="form-row">
+                <div class="form-group col-md-4 col-lg-4">
+                    <label for="city">City</label>
+                    <select id="city" class="form-control form-control-sm" name="city"
+                            onchange="this.form.submit()">
+                        <option {% if city_dropdown_value == 'All' %} selected {% endif %}>All</option>
+                        <option {% if city_dropdown_value == 'Moscow' %} selected {% endif %}>Moscow</option>
+                        <option {% if city_dropdown_value == 'Saint-Petersburg' %} selected {% endif %}>Saint-Petersburg</option>
+                        <option {% if city_dropdown_value == 'Rostov-on-Don' %} selected {% endif %}>Rostov-on-Don</option>
+                        <option {% if city_dropdown_value == 'Sevastopol' %} selected {% endif %}>Sevastopol</option>
+                        <option {% if city_dropdown_value == 'Kemerovo' %} selected {% endif %}>Kemerovo</option>
+                        <option {% if city_dropdown_value == 'Kazan' %} selected {% endif %}>Kazan</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 col-lg-4">
+                    <label for="year">Year</label>
+                    <select id="year" class="form-control form-control-sm" name="year"
+                            onchange="this.form.submit()">
+                        <option {% if year_dropdown_value == '2016' %} selected {% endif %}>2016</option>
+                        <option {% if year_dropdown_value == '2017' %} selected {% endif %}>2017</option>
+                        <option {% if year_dropdown_value == '2018' %} selected {% endif %}>2018</option>
+                        <option {% if year_dropdown_value == '2019' %} selected {% endif %}>2019</option>
+                        <option {% if year_dropdown_value == '2020' %} selected {% endif %}>2020</option>
+                        <option {% if year_dropdown_value == '2021' %} selected {% endif %}>2021</option>
+                        <option {% if year_dropdown_value == '2022' %} selected {% endif %}>2022</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 col-lg-4">
+                    <label for="distance">Distance</label>
+                    <select id="distance" class="form-control form-control-sm" name="distance"
+                            onchange="this.form.submit()">
+                        <option {% if distance_dropdown_value == '1000' %} selected {% endif %}>1000</option>
+                        <option {% if distance_dropdown_value == '5000' %} selected {% endif %}>5000</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-auto">
+                    <div id="btn_group_gender" class="btn-group" role="group" aria-label="Basic example">
+                        <button type="submit" id="all" class="btn btn-sm btn-outline-secondary" name="gender"
+                                value="All">All
+                        </button>
+                        <button type="submit" id="male" class="btn btn-sm btn-outline-secondary" name="gender"
+                                value="Male"><i class="fas fa-mars" style="color: rgba(0,177,252,0.84)"></i>
+                        </button>
+                        <button type="submit" id="female" class="btn btn-sm btn-outline-secondary" name="gender"
+                                value="Female"><i class="fas fa-venus" style="color: rgba(243,10,132,0.92)"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-auto">
-                        <div id="btn_group_gender" class="btn-group" role="group" aria-label="Basic example">
-                            <button type="submit" id="all" class="btn btn-sm btn-outline-secondary" name="gender" value="All">All</button>
-                            <button type="submit" id="male" class="btn btn-sm btn-outline-secondary" name="gender" value="Male"><i class="fas fa-mars" style="color: rgba(0,177,252,0.84)"></i></button>
-                            <button type="submit" id="female" class="btn btn-sm btn-outline-secondary" name="gender" value="Female"><i class="fas fa-venus" style="color: rgba(243,10,132,0.92)"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-auto">
-                        <button type="submit" id="clear_all" class="btn btn-sm btn-outline-secondary" name="clear_filter" value="True">Clear all filters</button>
-                    </div>
+                <div class="form-group col-md-auto">
+                    <button type="submit" id="clear_all" class="btn btn-sm btn-outline-secondary"
+                            name="clear_filter" value="True">Clear all filters
+                    </button>
                 </div>
-            </form>
-            <div class="table-responsive">
-                <table id="table"
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table id="table"
                    class="table table-sm">
                 <thead>
                 <tr>
-                    <th class="col_name" >Abs</th>
-                    <th class="col_name" >m/f</th>
-                    <th class="col_name" >Name</th>
-                    <th class="col_name" >Gender</th>
-                    <th class="col_name" >Rank</th>
-                    <th class="col_name" >Best</th>
+                    <th class="col_name">Abs</th>
+                    <th class="col_name">m/f</th>
+                    <th class="col_name">Name</th>
+                    <th class="col_name">Gender</th>
+                    <th class="col_name">Rank</th>
+                    <th class="col_name">Best</th>
                     <th class="col_name" data-visible={{ month_visible.jan }}>January</th>
                     <th class="col_name" data-visible={{ month_visible.feb }}>February</th>
                     <th class="col_name" data-visible={{ month_visible.mar }}>March</th>
@@ -246,327 +336,350 @@
                 </thead>
                 <tbody>
                 {% for result in all_results %}
-                    <tr>
-                        <td class="text_column">
-                            <strong>{{ result.overall_place }}</strong>
-                        </td>
-                        <td class="text_column">{{ result.place_in_group }}</td>
-                        <td class="text_column text-nowrap text-left">
-                            {{ result.name }}
-                            {% if result.place_in_group == 1 %}
-                                <i class="fas fa-medal" style="color: #ffd505"></i>
-                            {% endif %}
-                            {% if result.place_in_group == 2 %}
-                                <i class="fas fa-medal" style="color: #918f8f"></i>
-                            {% endif %}
-                            {% if result.place_in_group == 3 %}
-                                <i class="fas fa-medal" style="color: #9f5826"></i>
-                            {% endif %}
-                        </td>
-                        <td class="text_column">
-                            {% if result.gender == 'М' %}
-                                <i class="fas fa-mars" style="color: rgba(0,177,252,0.84)"></i>
-                            {% else %}
-                                <i class="fas fa-venus" style="color: rgba(243,10,132,0.92)"></i>
-                            {% endif %}
-                        </td>
-                        <td class="text_column">
-                            {% if result.rank == 'none' %}
+                <tr>
+                    <td class="text_column">
+                        <strong>{{ result.overall_place }}</strong>
+                    </td>
+                    <td class="text_column">{{ result.place_in_group }}</td>
+                    <td class="text_column text-nowrap text-left">
+                        {{ result.name }}
+                        {% if result.place_in_group == 1 %}
+                        <i class="fas fa-medal" style="color: #ffd505"></i>
+                        {% endif %}
+                        {% if result.place_in_group == 2 %}
+                        <i class="fas fa-medal" style="color: #918f8f"></i>
+                        {% endif %}
+                        {% if result.place_in_group == 3 %}
+                        <i class="fas fa-medal" style="color: #9f5826"></i>
+                        {% endif %}
+                    </td>
+                    <td class="text_column">
+                        {% if result.gender == 'М' %}
+                        <i class="fas fa-mars" style="color: rgba(0,177,252,0.84)"></i>
+                        {% else %}
+                        <i class="fas fa-venus" style="color: rgba(243,10,132,0.92)"></i>
+                        {% endif %}
+                    </td>
+                    <td class="text_column">
+                        {% if result.rank == 'none' %}
 
-                            {% else %}
-                                {% if result.rank == 'SUB20' %}
-                                    <div>
-                                        <span class="badge badge-warning tags" style="background-color: #f8d682">{{ result.rank }}</span>
-                                    </div>
-                                {% endif %}
-                                {% if result.rank == 'SUB25' %}
-                                    <div>
-                                        <span class="badge badge-success tags" style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
-                                    </div>
-                                {% endif %}
-                                {% if result.rank == 'SUB4' %}
-                                    <div>
-                                        <span class="badge badge-warning tags" style="background-color: #f8d682">{{ result.rank }}</span>
-                                    </div>
-                                {% endif %}
-                                {% if result.rank == 'SUB5' %}
-                                    <div>
-                                        <span class="badge badge-success tags" style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
-                                    </div>
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_column" style="font-weight: bold; font-size: smaller" >
-                            <!--span class="badge rounded-pill bg-primary text-white"-->
-                                {{ result.best_time }}
-                            <!--/span-->
-                        </td>
-                        <td class="text_result">
-                            {% if result.jan_result == '0' %}
+                        {% else %}
+                        {% if result.rank == 'SUB20' %}
+                        <div>
+                            <span class="badge badge-warning tags"
+                                  style="background-color: #f8d682">{{ result.rank }}</span>
+                        </div>
+                        {% endif %}
+                        {% if result.rank == 'SUB25' %}
+                        <div>
+                                <span class="badge badge-success tags"
+                                      style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
+                        </div>
+                        {% endif %}
+                        {% if result.rank == 'SUB4' %}
+                        <div>
+                            <span class="badge badge-warning tags"
+                                  style="background-color: #f8d682">{{ result.rank }}</span>
+                        </div>
+                        {% endif %}
+                        {% if result.rank == 'SUB5' %}
+                        <div>
+                                <span class="badge badge-success tags"
+                                      style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_column" style="font-weight: bold; font-size: smaller">
+                        <!--span class="badge rounded-pill bg-primary text-white"-->
+                        {{ result.best_time }}
+                        <!--/span-->
+                    </td>
+                    <td class="text_result">
+                        {% if result.jan_result == '0' %}
 
-                            {% else %}
-                                {{ result.jan_result }}
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.feb_result == '0' %}
+                        {% else %}
+                        {{ result.jan_result }}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.feb_result == '0' %}
 
-                            {% else %}
-                                {% if result.feb_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.feb_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.feb_result }}
                                     </span>
-                                {% elif result.feb_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.feb_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.feb_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.feb_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.mar_result == '0' %}
+                        {% else %}
+                        {{ result.feb_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.mar_result == '0' %}
 
-                            {% else %}
-                                {% if result.mar_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.mar_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.mar_result }}
                                     </span>
-                                {% elif result.mar_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.mar_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.mar_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.mar_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.apr_result == '0' %}
+                        {% else %}
+                        {{ result.mar_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.apr_result == '0' %}
 
-                            {% else %}
-                                {% if result.apr_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.apr_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.apr_result }}
                                     </span>
-                                {% elif result.apr_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.apr_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.apr_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.apr_result }}
-                                {% endif %}
+                        {% else %}
+                        {{ result.apr_result }}
+                        {% endif %}
 
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.may_result == '0' %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.may_result == '0' %}
 
-                            {% else %}
-                                {% if result.may_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.may_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.may_result }}
                                     </span>
-                                {% elif result.may_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.may_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.may_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.may_result }}
-                                {% endif %}
+                        {% else %}
+                        {{ result.may_result }}
+                        {% endif %}
 
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.jun_result == '0' %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.jun_result == '0' %}
 
-                            {% else %}
-                                {% if result.jun_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.jun_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.jun_result }}
                                     </span>
-                                {% elif result.jun_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.jun_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.jun_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.jun_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.jul_result == '0' %}
+                        {% else %}
+                        {{ result.jun_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.jul_result == '0' %}
 
-                            {% else %}
-                                {% if result.jul_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.jul_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.jul_result }}
                                     </span>
-                                {% elif result.jul_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.jul_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.jul_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.jul_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result">
-                            {% if result.aug_result == '0' %}
+                        {% else %}
+                        {{ result.jul_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result">
+                        {% if result.aug_result == '0' %}
 
-                            {% else %}
-                                {% if result.aug_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.aug_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.aug_result }}
                                     </span>
-                                {% elif result.aug_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.aug_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.aug_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.aug_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result" data-visible="false">
-                            {% if result.sep_result == '0' %}
+                        {% else %}
+                        {{ result.aug_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result" data-visible="false">
+                        {% if result.sep_result == '0' %}
 
-                            {% else %}
-                                {% if result.sep_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.sep_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.sep_result }}
                                     </span>
-                                {% elif result.sep_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.sep_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.sep_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.sep_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result" data-visible="false">
-                            {% if result.oct_result == '0' %}
+                        {% else %}
+                        {{ result.sep_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result" data-visible="false">
+                        {% if result.oct_result == '0' %}
 
-                            {% else %}
-                                {% if result.oct_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.oct_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.oct_result }}
                                     </span>
-                                {% elif result.oct_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.oct_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.oct_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.oct_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result" data-visible="false">
-                            {% if result.nov_result == '0' %}
+                        {% else %}
+                        {{ result.oct_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result" data-visible="false">
+                        {% if result.nov_result == '0' %}
 
-                            {% else %}
-                                {% if result.nov_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.nov_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.nov_result }}
                                     </span>
-                                {% elif result.nov_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.nov_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.nov_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.nov_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                        <td class="text_result" data-visible="false">
-                            {% if result.dec_result == '0' %}
+                        {% else %}
+                        {{ result.nov_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                    <td class="text_result" data-visible="false">
+                        {% if result.dec_result == '0' %}
 
-                            {% else %}
-                                {% if result.dec_progress == 1 %}
-                                    <span class="text-success">
+                        {% else %}
+                        {% if result.dec_progress == 1 %}
+                        <span class="text-success">
                                         {{ result.dec_result }}
                                     </span>
-                                {% elif result.dec_progress == -1 %}
-                                    <span class="text-danger">
+                        {% elif result.dec_progress == -1 %}
+                        <span class="text-danger">
                                         {{ result.dec_result }}
                                     </span>
-                                {% else %}
-                                    {{ result.dec_result }}
-                                {% endif %}
-                            {% endif %}
-                        </td>
-                    </tr>
+                        {% else %}
+                        {{ result.dec_result }}
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                </tr>
                 {% endfor %}
                 </tbody>
             </table>
-            </div>
         </div>
     </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js"></script>
-    <script>
-        $('#table').bootstrapTable({
-            pagination: true,
-            pageSize: 50,
-            showPaginationSwitch: true,
-            search: true,
-            searchAlign: "left",
-            showColumns: true,
-            showColumnsSearch: true,
-            fixedColumns: true,
-            showFullscreen: true,
-            fixedNumber: 3,
-            iconSize: "sm"
-        })
-    </script>
-    <script src="https://static.tildacdn.com/js/jquery-1.10.2.min.js"></script>
-    <script src="https://static.tildacdn.com/js/tilda-scripts-3.0.min.js"></script>
-    <script src="https://project50997.tilda.ws/tilda-blocks-2.7.js"></script>
-    <script src="https://static.tildacdn.com/js/lazyload-1.3.min.js"></script>
-    <script src="https://static.tildacdn.com/js/tilda-cover-1.0.min.js"></script>
-    <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js"></script>
-    <script src="https://static.tildacdn.com/js/tilda-menusub-1.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js"></script>
+<script>
+    $('#table').bootstrapTable({
+        pagination: true,
+        pageSize: 50,
+        showPaginationSwitch: true,
+        search: true,
+        searchAlign: "left",
+        showColumns: true,
+        showColumnsSearch: true,
+        fixedColumns: true,
+        showFullscreen: true,
+        fixedNumber: 3,
+        iconSize: "sm"
+    })
+</script>
+<script src="https://static.tildacdn.com/js/jquery-1.10.2.min.js"></script>
+<script src="https://static.tildacdn.com/js/tilda-scripts-3.0.min.js"></script>
+<script src="https://project50997.tilda.ws/tilda-blocks-2.7.js"></script>
+<script src="https://static.tildacdn.com/js/lazyload-1.3.min.js"></script>
+<script src="https://static.tildacdn.com/js/tilda-cover-1.0.min.js"></script>
+<script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js"></script>
+<script src="https://static.tildacdn.com/js/tilda-menusub-1.0.min.js"></script>
 
 </body>
 <footer>
-    <div id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="50997" data-tilda-page-id="1877588" data-tilda-page-alias="footer" data-tilda-formskey="4c304f142e5a904bf2ff50e59b9ddd41" data-blocks-animationoff="yes" data-tilda-lazy="yes">
-        <div id="rec37267872" class="r t-rec t-rec_pt_75 t-rec_pb_90" style="padding-top:75px;padding-bottom:90px;background-color:#000000; " data-animationappear="off" data-record-type="420" data-bg-color="#000000">
+    <div id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="50997"
+         data-tilda-page-id="1877588" data-tilda-page-alias="footer"
+         data-tilda-formskey="4c304f142e5a904bf2ff50e59b9ddd41" data-blocks-animationoff="yes" data-tilda-lazy="yes">
+        <div id="rec37267872" class="r t-rec t-rec_pt_75 t-rec_pb_90"
+             style="padding-top:75px;padding-bottom:90px;background-color:#000000; " data-animationappear="off"
+             data-record-type="420" data-bg-color="#000000">
             <!-- T420 -->
             <div class="t420">
                 <div class="t-container t-align_left">
                     <div class="t420__col t-col t-col_3">
                         <a href="#" style="color:#ffffff;font-size:20px;">
-                            <img src="https://static.tildacdn.com/tild6335-3765-4962-b836-373137393331/-/empty/Main_Logo.png" data-original="https://static.tildacdn.com/tild6335-3765-4962-b836-373137393331/Main_Logo.png" class="t420__logo t-img" imgfield="img" alt="Направления"></a>
+                            <img src="https://static.tildacdn.com/tild6335-3765-4962-b836-373137393331/-/empty/Main_Logo.png"
+                                 data-original="https://static.tildacdn.com/tild6335-3765-4962-b836-373137393331/Main_Logo.png"
+                                 class="t420__logo t-img" imgfield="img" alt="Направления"></a>
                         <div class="t-sociallinks">
                             <div class="t-sociallinks__wrapper">
                                 <div class="t-sociallinks__item">
                                     <a href="https://vk.com/ilovesupersport" target="_blank">
-                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 99 99" enable-background="new 0 0 99 99" xml:space="preserve">
+                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             x="0px" y="0px" width="25px" height="25px" viewBox="0 0 99 99"
+                                             enable-background="new 0 0 99 99" xml:space="preserve">
                                             <desc>VK</desc>
-                                            <path style="fill:#ffffff;" fill-rule="evenodd" clip-rule="evenodd" d="M49 98C76.062 98 98 76.062 98 49C98 21.938 76.062 0 49 0C21.938 0 0 21.938 0 49C0 76.062 21.938 98 49 98ZM22 34C22.4442 55.3198 33.1042 68.1323 51.7933 68.1323H52.8527V55.9351C59.7202 56.6182 64.9132 61.6409 66.9973 68.1323H76.7008C74.0359 58.4292 67.0314 53.0649 62.658 51.0149C67.0314 48.4866 73.1814 42.3367 74.6505 34H65.8353C63.922 40.7649 58.251 46.915 52.8527 47.4958V34H44.0374V57.6433C38.5707 56.2766 31.6692 49.6482 31.3617 34H22Z" />
+                                            <path style="fill:#ffffff;" fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M49 98C76.062 98 98 76.062 98 49C98 21.938 76.062 0 49 0C21.938 0 0 21.938 0 49C0 76.062 21.938 98 49 98ZM22 34C22.4442 55.3198 33.1042 68.1323 51.7933 68.1323H52.8527V55.9351C59.7202 56.6182 64.9132 61.6409 66.9973 68.1323H76.7008C74.0359 58.4292 67.0314 53.0649 62.658 51.0149C67.0314 48.4866 73.1814 42.3367 74.6505 34H65.8353C63.922 40.7649 58.251 46.915 52.8527 47.4958V34H44.0374V57.6433C38.5707 56.2766 31.6692 49.6482 31.3617 34H22Z"/>
                                         </svg>
                                     </a>
                                 </div>
                                 <div class="t-sociallinks__item">
                                     <a href="https://www.youtube.com/user/iloverunningschool" target="_blank">
-                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48"
+                                             enable-background="new 0 0 48 48" xml:space="preserve">
                                             <desc>Youtube</desc>
-                                            <path style="fill:#ffffff;" d="M24 0.0130005C37.248 0.0130005 47.987 10.753 47.987 24C47.987 37.247 37.247 47.987 24 47.987C10.753 47.987 0.0130005 37.247 0.0130005 24C0.0130005 10.753 10.752 0.0130005 24 0.0130005ZM35.815 18.093C35.565 16.756 34.452 15.758 33.173 15.635C30.119 15.439 27.054 15.28 23.995 15.278C20.936 15.276 17.882 15.432 14.828 15.625C13.544 15.749 12.431 16.742 12.182 18.084C11.898 20.017 11.756 21.969 11.756 23.92C11.756 25.871 11.898 27.823 12.182 29.756C12.431 31.098 13.544 32.21 14.828 32.333C17.883 32.526 20.935 32.723 23.995 32.723C27.053 32.723 30.121 32.551 33.173 32.353C34.452 32.229 35.565 31.084 35.815 29.747C36.101 27.817 36.244 25.868 36.244 23.919C36.244 21.971 36.101 20.023 35.815 18.093ZM21.224 27.435V20.32L27.851 23.878L21.224 27.435Z" />
+                                            <path style="fill:#ffffff;"
+                                                  d="M24 0.0130005C37.248 0.0130005 47.987 10.753 47.987 24C47.987 37.247 37.247 47.987 24 47.987C10.753 47.987 0.0130005 37.247 0.0130005 24C0.0130005 10.753 10.752 0.0130005 24 0.0130005ZM35.815 18.093C35.565 16.756 34.452 15.758 33.173 15.635C30.119 15.439 27.054 15.28 23.995 15.278C20.936 15.276 17.882 15.432 14.828 15.625C13.544 15.749 12.431 16.742 12.182 18.084C11.898 20.017 11.756 21.969 11.756 23.92C11.756 25.871 11.898 27.823 12.182 29.756C12.431 31.098 13.544 32.21 14.828 32.333C17.883 32.526 20.935 32.723 23.995 32.723C27.053 32.723 30.121 32.551 33.173 32.353C34.452 32.229 35.565 31.084 35.815 29.747C36.101 27.817 36.244 25.868 36.244 23.919C36.244 21.971 36.101 20.023 35.815 18.093ZM21.224 27.435V20.32L27.851 23.878L21.224 27.435Z"/>
                                         </svg>
                                     </a>
                                 </div>
                                 <div class="t-sociallinks__item">
                                     <a href="https://teleg.run/ilovesupersport " target="_blank">
-                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 60 60" xml:space="preserve">
+                                        <svg class="t-sociallinks__svg" version="1.1" id="Layer_1"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="25px" height="25px" viewBox="0 0 60 60" xml:space="preserve">
                                             <desc>Telegram</desc>
-                                            <path style="fill:#ffffff;" d="M30 0C13.4 0 0 13.4 0 30s13.4 30 30 30 30-13.4 30-30S46.6 0 30 0zm16.9 13.9l-6.7 31.5c-.1.6-.8.9-1.4.6l-10.3-6.9-5.5 5.2c-.5.4-1.2.2-1.4-.4L18 32.7l-9.5-3.9c-.7-.3-.7-1.5 0-1.8l37.1-14.1c.7-.2 1.4.3 1.3 1z" />
-                                            <path style="fill:#ffffff;" d="M22.7 40.6l.6-5.8 16.8-16.3-20.2 13.3" />
+                                            <path style="fill:#ffffff;"
+                                                  d="M30 0C13.4 0 0 13.4 0 30s13.4 30 30 30 30-13.4 30-30S46.6 0 30 0zm16.9 13.9l-6.7 31.5c-.1.6-.8.9-1.4.6l-10.3-6.9-5.5 5.2c-.5.4-1.2.2-1.4-.4L18 32.7l-9.5-3.9c-.7-.3-.7-1.5 0-1.8l37.1-14.1c.7-.2 1.4.3 1.3 1z"/>
+                                            <path style="fill:#ffffff;" d="M22.7 40.6l.6-5.8 16.8-16.3-20.2 13.3"/>
                                         </svg>
                                     </a>
                                 </div>
@@ -575,38 +688,55 @@
                         <div class="t420__text t-descr t-descr_xxs" style="" field="text">© 2020 I Love Supersport</div>
                     </div>
                     <div class="t420__col t-col t-col_3">
-                        <div class="t420__title t-name t-name_xs " field="title" style="color: #525252;">Направления</div>
+                        <div class="t420__title t-name t-name_xs " field="title" style="color: #525252;">Направления
+                        </div>
                         <div class="t420__descr t-descr t-descr_xxs" field="descr" style="color: #ffffff;">
                             <ul>
-                                <li><a href="https://ilovesupersport.com/running" target="_blank" style="">Running</a></li>
-                                <li><a href="https://ilovesupersport.com/swimming" target="_blank" style="">Swimming</a></li>
-                                <li><a href="https://ilovesupersport.com/cycling" target="_blank" style="">Cycling</a></li>
-                                <li><a href="https://ilovesupersport.com/triathlon" target="_blank" style="">Triathlon</a></li>
-                                <li><a href="https://ilovesupersport.com/skiing" target="_blank" style="">Skiing</a></li>
-                                <li><a href="https://ilovesupersport.com/personal" target="_blank" style="">Персональные тренировки</a></li>
-                                <li><a href="http://shop.ilovesupersport.com/?utm_source=ilsscom&amp;utm_medium=organic&amp;utm_campaign=ilsscom_link&amp;utm_content=ilsscom_link&amp;utm_term=ilsscom_link" target="_blank" style="">Онлайн-магазин</a> экипировки</li>
+                                <li><a href="https://ilovesupersport.com/running" target="_blank" style="">Running</a>
+                                </li>
+                                <li><a href="https://ilovesupersport.com/swimming" target="_blank" style="">Swimming</a>
+                                </li>
+                                <li><a href="https://ilovesupersport.com/cycling" target="_blank" style="">Cycling</a>
+                                </li>
+                                <li><a href="https://ilovesupersport.com/triathlon" target="_blank"
+                                       style="">Triathlon</a></li>
+                                <li><a href="https://ilovesupersport.com/skiing" target="_blank" style="">Skiing</a>
+                                </li>
+                                <li><a href="https://ilovesupersport.com/personal" target="_blank" style="">Персональные
+                                    тренировки</a></li>
+                                <li>
+                                    <a href="http://shop.ilovesupersport.com/?utm_source=ilsscom&amp;utm_medium=organic&amp;utm_campaign=ilsscom_link&amp;utm_content=ilsscom_link&amp;utm_term=ilsscom_link"
+                                       target="_blank" style="">Онлайн-магазин</a> экипировки
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="t420__floatbeaker_lr3"></div>
                     <div>
                         <div class="t420__col t-col t-col_3">
-                            <div class="t420__title t-name t-name_xs " field="title2" style="color: #525252;">Материалы</div>
+                            <div class="t420__title t-name t-name_xs " field="title2" style="color: #525252;">
+                                Материалы
+                            </div>
                             <div class="t420__descr t-descr t-descr_xxs" field="descr2" style="color: #ffffff;">
                                 <ul>
                                     <li><a href="http://ilovesupersport.com/blog" target="_blank" style="">Блог</a></li>
-                                    <li><a href="https://www.youtube.com/user/iloverunningschool" target="_blank" style="">Видеоканал</a></li>
-                                    <li><a href="https://ilovesupersport.com/rules" style="color:#000000 !important;"><span style="color: rgb(255, 255, 255);">Правовые документы</span></a></li>
+                                    <li><a href="https://www.youtube.com/user/iloverunningschool" target="_blank"
+                                           style="">Видеоканал</a></li>
+                                    <li><a href="https://ilovesupersport.com/rules"
+                                           style="color:#000000 !important;"><span style="color: rgb(255, 255, 255);">Правовые документы</span></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="t420__col t-col t-col_3">
-                            <div class="t420__title t-name t-name_xs " field="title3" style="color: #525252;">Контакты</div>
+                            <div class="t420__title t-name t-name_xs " field="title3" style="color: #525252;">Контакты
+                            </div>
                             <div class="t420__descr t-descr t-descr_xxs" field="descr3" style="color: #ffffff;">
                                 <div style="font-size:14px;" data-customstyle="yes">
                                     <ul>
                                         <li><a href="tel:+74951501510">+7 (495) 150-15-10</a></li>
-                                        <li><a href="mailto:ilovesupersport.com" style="">info@ilovesupersport.co</a>m</li>
+                                        <li><a href="mailto:ilovesupersport.com" style="">info@ilovesupersport.co</a>m
+                                        </li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -621,17 +751,24 @@
         <div id="rec48490132" class="r t-rec" style=" " data-record-type="808">
             <!-- T808 -->
             <script>
-            var t808__data48490132 = [];
-            t808__data48490132.push({ "link": "http://dubai.ilovesupersport.com/", "geo": ["Abu Dhabi", "Al Ain", "As Satwah", "Dayrah", "Dubai", "Umm al Qaywayn", "Ras al-Khaimah", "Khawr Fakkan", "Sharjah", "Al Fujayrah", ] });
-            $.ajax({
-                type: "GET",
-                url: "https://geo.tildacdn.com/geo/full/",
-                crossDomain: true,
-                dataType: "json",
-                success: function(geo) { t808_geoRedirect(geo, t808__data48490132) },
-                error: function(geo) { t808_geoRedirect(geo, t808__data48490132) },
-                timeout: 1000 * 15
-            });
+                var t808__data48490132 = [];
+                t808__data48490132.push({
+                    "link": "http://dubai.ilovesupersport.com/",
+                    "geo": ["Abu Dhabi", "Al Ain", "As Satwah", "Dayrah", "Dubai", "Umm al Qaywayn", "Ras al-Khaimah", "Khawr Fakkan", "Sharjah", "Al Fujayrah",]
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "https://geo.tildacdn.com/geo/full/",
+                    crossDomain: true,
+                    dataType: "json",
+                    success: function (geo) {
+                        t808_geoRedirect(geo, t808__data48490132)
+                    },
+                    error: function (geo) {
+                        t808_geoRedirect(geo, t808__data48490132)
+                    },
+                    timeout: 1000 * 15
+                });
             </script>
         </div>
     </div>
