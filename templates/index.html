@@ -371,16 +371,22 @@
                                       style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
                         </div>
                         {% endif %}
-                        {% if result.rank == 'SUB4' %}
+                        {% if result.rank == 'SUB3' %}
                         <div>
                             <span class="badge badge-warning tags"
                                   style="background-color: #f8d682">{{ result.rank }}</span>
                         </div>
                         {% endif %}
+                        {% if result.rank == 'SUB4' %}
+                        <div>
+                            <span class="badge badge-warning tags"
+                                  style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
+                        </div>
+                        {% endif %}
                         {% if result.rank == 'SUB5' %}
                         <div>
                                 <span class="badge badge-success tags"
-                                      style="background-color: #b9b9b5; color: #1a1e21">{{ result.rank }}</span>
+                                      style="background-color: #cd7f32">{{ result.rank }}</span>
                         </div>
                         {% endif %}
                         {% endif %}
