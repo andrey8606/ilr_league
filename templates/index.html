@@ -252,13 +252,11 @@
                     <label for="city">City</label>
                     <select id="city" class="form-control form-control-sm" name="city"
                             onchange="this.form.submit()">
-                        <option {% if city_dropdown_value == 'All' %} selected {% endif %}>All</option>
-                        <option {% if city_dropdown_value == 'Moscow' %} selected {% endif %}>Moscow</option>
-                        <option {% if city_dropdown_value == 'Saint-Petersburg' %} selected {% endif %}>Saint-Petersburg</option>
-                        <option {% if city_dropdown_value == 'Rostov-on-Don' %} selected {% endif %}>Rostov-on-Don</option>
-                        <option {% if city_dropdown_value == 'Sevastopol' %} selected {% endif %}>Sevastopol</option>
-                        <option {% if city_dropdown_value == 'Kemerovo' %} selected {% endif %}>Kemerovo</option>
-                        <option {% if city_dropdown_value == 'Kazan' %} selected {% endif %}>Kazan</option>
+                        <option {% if city_dropdown_value=='All' %} selected {% endif %}>All</option>
+                        <option {% if city_dropdown_value=='Moscow' %} selected {% endif %}>Moscow</option>
+                        <option {% if city_dropdown_value=='Saint-Petersburg' %} selected {% endif %}>Saint-Petersburg</option>
+                        <option {% if city_dropdown_value=='Novosibirsk' %} selected {% endif %}>Novosibirsk</option>
+                        <option {% if city_dropdown_value=='Vladimir' %} selected {% endif %}>Vladimir</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4 col-lg-4">

@@ -11,6 +11,8 @@ CITIES = {
     'Sevastopol': 'Севастополь',
     'Kemerovo': 'Кемерово',
     'Kazan': 'Казань',
+    'Novosibirsk': 'Новосибирск',
+    'Vladimir': 'Владимир',
 }
 MONTHS = ['jan', 'feb', 'mar', 'apr', 'may',
           'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
