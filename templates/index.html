@@ -306,6 +306,7 @@
                     <th class="col_name">Abs</th>
                     <th class="col_name">m/f</th>
                     <th class="col_name">Name</th>
+                    <th class="col_name">City</th>
                     <th class="col_name">Gender</th>
                     <th class="col_name">Rank</th>
                     <th class="col_name">Best</th>
@@ -342,6 +343,32 @@
                         <i class="fas fa-medal" style="color: #9f5826"></i>
                         {% endif %}
                     </td>
+                    <td class="text_column text-nowrap text-left">
+                        {% if result.city == 'Москва' %}
+                            Moscow
+                        {% endif %}
+                        {% if result.city == 'Санкт-Петербург' %}
+                            Saint-Petersburg
+                        {% endif %}
+                        {% if result.city == 'Кемерово' %}
+                            Kemerovo
+                        {% endif %}
+                        {% if result.city == 'Ростов-на-Дону' %}
+                            Rostov-on-Don
+                        {% endif %}
+                        {% if result.city == 'Севастополь' %}
+                            Sevastopol
+                        {% endif %}
+                        {% if result.city == 'Казань' %}
+                            Kazan
+                        {% endif %}
+                        {% if result.city == 'Новосибирск' %}
+                            Novosibirsk
+                        {% endif %}
+                        {% if result.city == 'Владимир' %}
+                            Vladimir
+                        {% endif %}
+                        </td>
                     <td class="text_column">
                         {% if result.gender == 'М' %}
                         <i class="fas fa-mars" style="color: rgba(0,177,252,0.84)"></i>
