@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 from .models import Result
 
-CURR_YEAR = '2022'
+CURR_YEAR = '2023'
 CURR_DISTANCE = '1000'
 CITIES = {
     'Moscow': 'Москва',
